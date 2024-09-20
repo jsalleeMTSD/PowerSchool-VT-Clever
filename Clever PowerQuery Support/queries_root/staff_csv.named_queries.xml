@@ -23,7 +23,7 @@ WITH My_Schools AS (
 	FROM
 		SCHOOLS
 	WHERE
-		SCHOOL_NUMBER < 100
+		SCHOOL_NUMBER != 130 AND SCHOOL_NUMBER != 999999
 	UNION
 	SELECT
 		0
@@ -31,7 +31,7 @@ WITH My_Schools AS (
 		DUAL
 )
 SELECT
-	CASE WHEN ( MY_Schools.school_number > 100 OR MY_Schools.school_number = 0) THEN 'DEFAULT_DISTRICT_OFFICE' ELSE to_char(MY_Schools.school_number) END "school_id",
+	CASE WHEN ( MY_Schools.school_number < 130 OR MY_Schools.school_number = 0) THEN 'DEFAULT_DISTRICT_OFFICE' ELSE to_char(MY_Schools.school_number) END "school_id",
 	users.dcid "teacher_id",
 	users.email_addr "staff_email",
 	users.first_name "first_name",
@@ -44,7 +44,7 @@ SELECT
 	groups.name "ext.group_name"
 FROM
 	users
-	LEFT JOIN s_NJ_usr_x ON s_NJ_usr_x.usersdcid = users.dcid
+	LEFT JOIN s_VT_usr_x ON s_VT_usr_x.usersdcid = users.dcid
 	LEFT JOIN gen groups ON groups.cat = 'groups'
 	AND groups.id = users.groupvalue
 	LEFT JOIN u_def_ext_users ON u_def_ext_users.usersdcid = users.dcid
@@ -59,10 +59,12 @@ WHERE
 		WHERE
 			schoolstaff.status = 1
 	)
+	/* not in use
 	AND (
 		u_def_ext_users.clever_exclude IS NULL
 		OR u_def_ext_users.clever_exclude = 0
-	)
+	) 
+	*/
 ORDER BY
 	users.dcid
 			]]>

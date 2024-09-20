@@ -1,5 +1,5 @@
 <queries>
-  <query name="com.hanovertwpschools.core.clever.students" coreTable="STUDENTS" flattened="true" tags="">
+  <query name="com.mtsd.core.clever.students" coreTable="STUDENTS" flattened="true" tags="">
     <summary>Clever Students Export</summary>
     <description>Student Information</description>
 		<columns>

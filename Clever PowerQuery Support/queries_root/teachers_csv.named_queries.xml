@@ -25,7 +25,7 @@ WITH My_Schools AS (
 	FROM
 		SCHOOLS
 	WHERE
-		SCHOOL_NUMBER < 100
+		SCHOOL_NUMBER != 130
 	UNION
 	SELECT
 		0
@@ -40,7 +40,7 @@ SELECT
 	END	"school_id",
 	users.dcid "teacher_id",
 	users.teachernumber "teacher_number",
-	s_nj_usr_x.StaffMemberID "State_Teacher_id",
+	s_vt_usr_x.educatorid "State_Teacher_id",
 	users.email_addr "teacher_email",
 	users.first_name "first_name",
 	users.middle_name "middle_name",
@@ -52,7 +52,7 @@ SELECT
 	groups.name "ext.group_name"
 FROM
 	users
-	LEFT JOIN s_NJ_usr_x ON s_NJ_usr_x.usersdcid = users.dcid
+	LEFT JOIN s_VT_usr_x ON s_VT_usr_x.usersdcid = users.dcid
 	LEFT JOIN gen groups ON groups.cat = 'groups'
 	AND groups.id = users.groupvalue
 	LEFT JOIN u_def_ext_users ON u_def_ext_users.usersdcid = users.dcid
@@ -67,10 +67,12 @@ WHERE
 		WHERE
 			schoolstaff.status = 1
 	)
+	/*
 	AND (
 		u_def_ext_users.clever_exclude IS NULL
 		OR u_def_ext_users.clever_exclude = 0
 	)
+	*/
 ORDER BY
 	users.dcid
 			]]>

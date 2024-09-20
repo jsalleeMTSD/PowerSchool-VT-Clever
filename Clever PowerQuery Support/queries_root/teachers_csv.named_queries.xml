@@ -1,5 +1,5 @@
 <queries>
-	<query name="com.hanovertwpschools.core.clever.teachers" flattened="true">
+	<query name="com.mtsd.core.clever.teachers" flattened="true">
 		<summary>Clever Teacher Export</summary>
 		<description>Teacher Information</description>
 		<columns>

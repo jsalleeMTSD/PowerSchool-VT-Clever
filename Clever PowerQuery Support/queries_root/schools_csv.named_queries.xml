@@ -54,7 +54,7 @@
 				schools.asstprincipalemail,
 				schools.asstprincipal
 				 FROM SCHOOLS
-				WHERE school_number < 100
+				WHERE school_number > 130 and school_number < 999999
 			]]>
 		</sql>
 	</query>

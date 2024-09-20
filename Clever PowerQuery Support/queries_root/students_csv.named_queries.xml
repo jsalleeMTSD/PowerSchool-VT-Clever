@@ -42,12 +42,12 @@
 						**CHECK_ME**
 						CASE
 						racecd
-						WHEN '01' THEN 'I'
-						WHEN '02' THEN 'A'
-						WHEN '04' THEN 'B'
-						WHEN '05' THEN 'W'
-						WHEN '06' THEN 'P'
-						END racecd AS race 
+						WHEN 'WHT' THEN 'W'
+						WHEN 'NAT' THEN 'P'
+						WHEN 'AFA' THEN 'B'
+						WHEN 'ASI' THEN 'A'
+						WHEN 'AMI' THEN 'I'
+						END racecd AS race
 						*/
 						racecd race
 					FROM
@@ -210,24 +210,18 @@
 					**CHECK_ME**
 					This code below will depend on how your state determines yout ELL_STATUS...
 	 				*/
-					'' ell_status,
-					CASE
-						students.lunchstatus
-						WHEN 'F' THEN 'F'
-						WHEN 'R' THEN 'R'
-						ELSE 'N'
-					END frl_status,
-					CASE
+					'' lep_status,
+					s_vt_stu_x.nslelg frl_status,
 					/*
 		 			**CHECK_ME**
 		 			This code below will depend on how your state determines yout IEP_STATUS...
-		 			*/
 						WHEN s_nj_stu_x.iep_begin_date IS NULL
 						AND s_nj_stu_x.iep_end_date IS NULL THEN 'N'
 						WHEN SYSDATE BETWEEN COALESCE(s_nj_stu_x.iep_begin_date, SYSDATE)
 						AND COALESCE(s_nj_stu_x.iep_end_date, SYSDATE) THEN 'Y'
 						ELSE 'N'
-					END iep_status,
+					END */
+					s_vt_stu_x.nslelg iep_status,
 					students.street student_street,
 					students.city student_city,
 					students.state student_state,
@@ -247,15 +241,16 @@
 	/*
 	 **CHECK_ME**
 	 This code below will depend on how your student's 'default password' is stored / generated.
-	 */
 					'id' || LPAD(students.student_number, 7, '0') AS password
+	*/
+					students.student_number password
 				FROM
 					students
 	/*
 	 **CHECK_ME**
 	 Below Import is State Dependent!
 	 */
-					LEFT JOIN s_nj_stu_x ON s_nj_stu_x.studentsdcid = students.dcid
+					LEFT JOIN s_vt_stu_x ON s_vt_stu_x.studentsdcid = students.dcid
 					LEFT JOIN (
 						SELECT
 							*
@@ -270,10 +265,10 @@
 					) contacts ON contacts.studentdcid = students.dcid
 					AND contacts.contact_name != ' '
 				WHERE
-					students.schoolid BETWEEN 0
-					AND 100
-					AND students.enrollment_schoolid BETWEEN 0
-					AND 100
+					students.schoolid BETWEEN 140
+					AND 200
+					AND students.enrollment_schoolid BETWEEN 140
+					AND 200
 					AND (
 						students.enroll_status = 0
 						OR (

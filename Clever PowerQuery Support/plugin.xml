@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://plugin.powerschool.pearson.com"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    description="Clever PowerQuery Support" name="GDM - Clever Support (PQ)" 
-    version="23.11.15.01"
+    description="Clever PowerQuery Support" name="Clever PowerQueries" 
+    version="00.24.09.001"
     xsi:schemaLocation="http://plugin.powerschool.pearson.com plugin.xsd">
-    <publisher name="Gregory Matyola">
-        <contact email="greg.matyola@hanovertwpschools.org"/>
+    <publisher name="Jon Sallée">
+        <contact email="jsallee@mymtsd-vt.org"/>
     </publisher>
 </plugin>

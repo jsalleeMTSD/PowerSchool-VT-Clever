@@ -1,5 +1,5 @@
 <queries>
-	<query name="com.hanovertwpschools.core.clever.enrollments" flattened="true">
+	<query name="com.mtsd.core.clever.enrollments" flattened="true">
 		<summary>Clever Enrollments PQ</summary>
 		<description>Enrollment information</description>
 		<columns>

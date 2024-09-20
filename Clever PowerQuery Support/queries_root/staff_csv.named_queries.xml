@@ -1,5 +1,5 @@
 <queries>
-	<query name="com.hanovertwpschools.core.clever.staff" coreTable="users" flattened="true" tags="">
+	<query name="com.mtsd.core.clever.staff" coreTable="users" flattened="true" tags="">
 		<summary>Clever Staff PowerQuery</summary>
 		<description>Staff Information</description>
 		<columns>

@@ -56,7 +56,7 @@ FROM
 	cc
 	LEFT JOIN students ON students.id = cc.studentid
 WHERE
-	cc.schoolid NOT IN (0, 999999)
+	cc.schoolid NOT IN (0, 130, 999999)
 	/* 	AND cc.dateenrolled <= (
 	 SELECT
 	 effdate + 5
@@ -83,7 +83,7 @@ WHERE
 	)
 	AND cc.sectionid > 0
 	AND students.enroll_status IN (-1, 0)
-	AND students.schoolid NOT IN (0, 999999999)
+	AND students.schoolid NOT IN (0, 130, 999999999)
 			]]>
 		</sql>
 	</query>

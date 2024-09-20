@@ -99,8 +99,8 @@ FROM
 			/*  Exclude undesired courses - best practice would be to use a (custom) field
 			 to track courses like these so you don't have to update the SQL */
 			AND Courses.Course_Name NOT IN (
-				'Cafe Duty',
-				'Hall Duty/Coverage',
+				'Lunch',
+				'Study Hall',
 				'Staff Lunch',
 				'Staff Pref',
 				'Team Planning 6',
@@ -129,6 +129,8 @@ FROM
 			/*
 			 AND EXISTS ( select 1 from CC where sectionteacher.sectionid = abs(cc.sectionid) )
 			 */
+			/* exclude PKO */
+			AND Sections.SchoolID != 130
 		ORDER BY
 			Sections.ID,
 			CASE

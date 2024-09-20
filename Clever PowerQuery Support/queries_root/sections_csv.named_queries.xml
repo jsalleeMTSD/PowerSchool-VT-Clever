@@ -1,5 +1,5 @@
 <queries>
-    <query name="com.hanovertwpschools.core.clever.sections" coreTable="sections" flattened="true" tags="">
+    <query name="com.mtsd.core.clever.sections" coreTable="sections" flattened="true" tags="">
         <summary>Clever Sections Export (sections.csv)</summary>
         <description>Clever - Sections List - Current Year</description>
         <columns>

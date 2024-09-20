@@ -1,5 +1,5 @@
 <queries>
-	<query name="com.hanovertwpschools.core.clever.schools" flattened="true" tags="">
+	<query name="com.mtsd.core.clever.schools" flattened="true" tags="">
 		<summary>Clever Schools Export</summary>
    		<description>Schools information</description>
 		<columns>

@@ -6,7 +6,7 @@
 			<column column="teachers.schoolid" description="school_id">000_School_id</column>
 			<column column="teachers.users_dcid" description="teacher_id">001_Teacher_id</column>
 			<column column="teachers.teachernumber" description="teacher_number">002_Teacher_number</column>
-			<column column="s_nj_usr_x.StaffMemberID" description="State_teacher_id">003_State_teacher_id</column>
+			<column column="s_VT_usr_x.EducatorID" description="State_teacher_id">003_State_teacher_id</column>
 			<column column="users.email_addr" description="teacher_email">004_teacher_email</column>
 			<column column="users.First_Name" description="first_name">005_First_name</column>
 			<column column="users.Middle_name" description="middle_name">006_Middle_name</column>

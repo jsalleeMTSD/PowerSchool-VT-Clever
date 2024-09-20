@@ -1,4 +1,6 @@
-# PowerSchool-NJ-Clever
+# PowerSchool-VT-Clever
+
+A Vermont varient. Everything else in README is from the original. —Jon Sallée, 20 SEP 2024
 
 I've parked all files in the folder: Clever PowerQuery Support in order for a direct .zip download to be usable as a plugin as directly as possible.
 

@@ -15,7 +15,7 @@
 			<column column="students.last_name">dob</column>
 			<column column="students.ethnicity">Race</column>
 			<column column="students.fedethnicity">Hispanic_latino</column>
-			<column column="students.lep_status">ell_status</column>
+			<column column="studentcorefields.lep_status">ell_status</column>
 			<column column="s_vt_stu_x.nslelg">frl_status</column>
 			<column column="s_vt_stu_x.iep">iep_status</column>
 			<column column="students.street">student_street</column>
@@ -210,7 +210,7 @@
 					**CHECK_ME**
 					This code below will depend on how your state determines yout ELL_STATUS...
 	 				*/
-					'' lep_status,
+					studentcorefields.lep_status ell_status,
 					s_vt_stu_x.nslelg frl_status,
 					/*
 		 			**CHECK_ME**

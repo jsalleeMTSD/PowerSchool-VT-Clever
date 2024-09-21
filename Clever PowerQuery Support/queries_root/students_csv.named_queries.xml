@@ -15,9 +15,9 @@
 			<column column="students.last_name">dob</column>
 			<column column="students.ethnicity">Race</column>
 			<column column="students.fedethnicity">Hispanic_latino</column>
-			<column column="s_nj_stu_x.liep_type">ell_status</column>
-			<column column="students.lunchstatus">frl_status</column>
-			<column column="s_nj_stu_x.iep_level">iep_status</column>
+			<column column="students.lep_status">ell_status</column>
+			<column column="s_vt_stu_x.nslelg">frl_status</column>
+			<column column="s_vt_stu_x.iep">iep_status</column>
 			<column column="students.street">student_street</column>
 			<column column="students.city">student_city</column>
 			<column column="students.state">student_state</column>
@@ -29,7 +29,7 @@
 			<column column="phonenumber.phonenumber">contact_phone</column>
 			<column column="emailaddress.emailaddress">contact_email</column>
 			<column column="person.dcid">contact_sis_id</column>
-			<column column="psm_studentcontact.email">username</column>
+			<column column="studentemail.email">username</column>
 			<column column="students.student_number">password</column>
 		</columns>
 		<sql>
@@ -221,7 +221,7 @@
 						AND COALESCE(s_nj_stu_x.iep_end_date, SYSDATE) THEN 'Y'
 						ELSE 'N'
 					END */
-					s_vt_stu_x.nslelg iep_status,
+					s_vt_stu_x.iep iep_status,
 					students.street student_street,
 					students.city student_city,
 					students.state student_state,

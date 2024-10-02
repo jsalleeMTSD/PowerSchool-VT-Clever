@@ -29,7 +29,7 @@
 			<column column="phonenumber.phonenumber">contact_phone</column>
 			<column column="emailaddress.emailaddress">contact_email</column>
 			<column column="person.dcid">contact_sis_id</column>
-			<column column="studentemail.email">username</column>
+			<column column="U_StudentsUserFields.email">username</column>
 			<column column="students.student_number">password</column>
 		</columns>
 		<sql>
@@ -237,7 +237,7 @@
 	 **CHECK_ME**
 	 This code below will depend on how your student's 'default username' is stored.
 	 */
-					studentemail.email username,
+					U_StudentsUserFields.email username,
 	/*
 	 **CHECK_ME**
 	 This code below will depend on how your student's 'default password' is stored / generated.
